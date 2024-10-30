@@ -3,29 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de EGirBuchona</title>
+    <title>Portafolio de Gustavo Cocone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; color: #333; }
-        header { background-color: #4CAF50; color: white; padding: 20px; }
-        section { margin-top: 20px; }
-        footer { background-color: #333; color: white; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: #333; background-color: #f5f5f5; }
+
+        /* Estilo del header */
+        header { background-color: #4CAF50; color: white; padding: 40px; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        header p { font-size: 1.2em; margin-top: 10px; }
+
+        /* Contenedor principal */
+        .container { width: 90%; max-width: 1200px; margin: 40px auto; }
+
+        /* Sección Proyectos */
+        .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .project { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .project h3 { color: #4CAF50; }
+        .project p { margin-top: 10px; }
+
+        /* Sección Acerca de mí */
+        .about { text-align: center; padding: 40px 0; }
+        .about p { max-width: 800px; margin: 20px auto; font-size: 1.1em; }
+
+        /* Formulario de Contacto */
+        .contact-form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        .contact-form button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+
+        /* Pie de página */
+        footer { background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a mi Portafolio</h1>
-        <p>Desarrolladora de Software | Especialista en Desarrollo Web</p>
-    </header>
-    <section>
-        <h2>Proyectos Destacados</h2>
-        <ul>
-            <li><a href="#">Proyecto 1</a></li>
-            <li><a href="#">Proyecto 2</a></li>
-            <li><a href="#">Proyecto 3</a></li>
-        </ul>
+
+<header>
+    <h1>EGirlBuchona</h1>
+    <p>Desarrolladora de Software | Especialista en Desarrollo Web</p>
+</header>
+
+<div class="container">
+
+    <!-- Sección Acerca de Mí -->
+    <section class="about">
+        <h2>Acerca de Mí</h2>
+        <p>Soy una apasionada desarrolladora de software con experiencia en diseño de sitios web, bases de datos y aplicaciones interactivas. Mi misión es crear soluciones tecnológicas que faciliten la vida de las personas y aporten valor a las empresas.</p>
     </section>
-    <footer>
-        <p>Contacto: egirlbuchona@gmail.com</p>
-    </footer>
+
+    <!-- Sección de Proyectos -->
+    <section class="projects">
+        <h2>Proyectos Destacados</h2>
+        
+        <!-- Cada proyecto -->
+        <div class="project">
+            <h3>Proyecto 1: E-commerce</h3>
+            <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Proyecto 2: Gestión de Tareas</h3>
+            <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
+        </div>
+
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section class="contact-form">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/my-form-id" method="POST">
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="_replyto" placeholder="Tu email" required>
+            <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>Contacto: gustavovaldoky@gmail.com | Derechos Reservados © 2024</p>
+</footer>
+
 </body>
 </html>
