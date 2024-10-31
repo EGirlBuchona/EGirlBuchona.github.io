@@ -1,90 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Gustavo Cocone</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Portafolio de EGirBuchona</title>
+    <!-- Fuentes de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <style>
         /* Reset básico */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; color: #333; background-color: #f5f5f5; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333333;
+            background-color: #FDF3E7;
+            line-height: 1.6;
+        }
 
         /* Estilo del header */
-        header { background-color: #4CAF50; color: white; padding: 40px; text-align: center; }
-        header h1 { font-size: 2.5em; }
-        header p { font-size: 1.2em; margin-top: 10px; }
+        header {
+            background-color: #E4572E;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-style: italic;
+            color: #FFD1BA;
+        }
 
         /* Contenedor principal */
-        .container { width: 90%; max-width: 1200px; margin: 40px auto; }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            border-left: 1px solid #D4C5B0;
+            border-right: 1px solid #D4C5B0;
+        }
 
-        /* Sección Proyectos */
-        .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .project { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .project h3 { color: #4CAF50; }
-        .project p { margin-top: 10px; }
+        /* Títulos de sección con líneas tipo revista */
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #8C4A33;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #D4C5B0;
+        }
 
         /* Sección Acerca de mí */
-        .about { text-align: center; padding: 40px 0; }
-        .about p { max-width: 800px; margin: 20px auto; font-size: 1.1em; }
+        .about {
+            text-align: left;
+            padding: 40px 20px;
+            border-bottom: 1px solid #D4C5B0;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #4A403A;
+        }
+
+        /* Sección Proyectos en filas y columnas */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #D4C5B0;
+        }
+
+        .projects .project-center {
+            grid-column: span 2;
+            justify-self: center;
+        }
+
+        /* Estilos para cada proyecto */
+        .project {
+            background: #FFF5EB;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            color: #E4572E;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #4A403A;
+        }
+
+        /* Imágenes de los proyectos en blanco y negro para efecto clásico */
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            filter: grayscale(100%);
+            margin-bottom: 15px;
+        }
 
         /* Formulario de Contacto */
-        .contact-form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-        .contact-form button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .contact-form {
+            background: #FFF5EB;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #E4572E;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #D24D28;
+        }
 
         /* Pie de página */
-        footer { background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        footer {
+            background-color: #8C4A33;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Links y hover en enlaces */
+        a {
+            color: #E4572E;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>EGirlBuchona</h1>
-    <p>Desarrolladora de Software | Especialista en Desarrollo Web</p>
-</header>
+    <header>
+        <h1>EGirlBuchona</h1>
+        <p>Desarrolladora de Software | Inspiración en la simplicidad japonesa</p>
+    </header>
 
-<div class="container">
+    <div class="container">
 
-    <!-- Sección Acerca de Mí -->
-    <section class="about">
-        <h2>Acerca de Mí</h2>
-        <p>Soy una apasionada desarrolladora de software con experiencia en diseño de sitios web, bases de datos y aplicaciones interactivas. Mi misión es crear soluciones tecnológicas que faciliten la vida de las personas y aporten valor a las empresas.</p>
-    </section>
+        <!-- Sección Acerca de Mí -->
+        <section class="about">
+            <h2 class="section-title">Acerca de Mí</h2>
+            <p>Soy una apasionada desarrolladora de software con experiencia en diseño de sitios web, bases de datos y
+                aplicaciones interactivas. Mi misión es crear soluciones tecnológicas que faciliten la vida de las
+                personas y aporten valor a las empresas.</p>
+        </section>
 
-    <!-- Sección de Proyectos -->
-    <section class="projects">
-        <h2>Proyectos Destacados</h2>
-        
-        <!-- Cada proyecto -->
-        <div class="project">
-            <h3>Proyecto 1: E-commerce</h3>
-            <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
-        </div>
-        
-        <div class="project">
-            <h3>Proyecto 2: Gestión de Tareas</h3>
-            <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
-        </div>
+        <!-- Sección de Proyectos -->
+        <section class="projects">
+            <h2 class="section-title">Proyectos Destacados</h2>
 
-    </section>
+            <!-- Proyectos en una distribución de 2 columnas con uno centrado en la segunda fila -->
+            <div class="project">
+                <img src="prueba1.png" alt="Imagen de Proyecto 1">
+                <h3>Proyecto 1: E-commerce</h3>
+                <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
+            </div>
 
-    <!-- Formulario de Contacto -->
-    <section class="contact-form">
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/my-form-id" method="POST">
-            <input type="text" name="name" placeholder="Tu nombre" required>
-            <input type="email" name="_replyto" placeholder="Tu email" required>
-            <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+            <div class="project">
+                <img src="prueba2.png" alt="Imagen de Proyecto 2">
+                <h3>Proyecto 2: Gestión de Tareas</h3>
+                <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
+            </div>
 
-</div>
+            <div class="project project-center">
+                <img src="proyecto3.jpg" alt="Imagen de Proyecto 3">
+                <h3>Proyecto 3: Aplicación Personalizada</h3>
+                <p>Descripción breve del proyecto, tecnologías utilizadas y enlace al repositorio o demo.</p>
+            </div>
+        </section>
 
-<footer>
-    <p>Contacto: gustavovaldoky@gmail.com | Derechos Reservados © 2024</p>
-</footer>
+        <!-- Formulario de Contacto -->
+        <section class="contact-form">
+            <h2 class="section-title">Contacto</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="email" name="_replyto" placeholder="Tu email" required>
+                <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Contacto: egirlbuchona@gmail.com | Derechos Reservados © 2024</p>
+    </footer>
 
 </body>
+
 </html>
