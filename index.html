@@ -6,184 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Gustavo Cocone</title>
     <!-- Fuentes de Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            color: #333333;
-            background-color: #FDF3E7;
-            line-height: 1.6;
-        }
-
-        /* Estilo del header */
-        header {
-            background-color: #E4572E;
-            color: white;
-            padding: 50px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3em;
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            font-style: italic;
-            color: #FFD1BA;
-        }
-
-        /* Contenedor principal */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            border-left: 1px solid #D4C5B0;
-            border-right: 1px solid #D4C5B0;
-        }
-
-        /* Títulos de sección con líneas tipo revista */
-        h2.section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            color: #8C4A33;
-            margin-bottom: 20px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #D4C5B0;
-        }
-
-        /* Sección Acerca de mí */
-        .about {
-            text-align: left;
-            padding: 40px 20px;
-            border-bottom: 1px solid #D4C5B0;
-        }
-
-        .about p {
-            max-width: 800px;
-            margin: 20px auto;
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #4A403A;
-        }
-
-        /* Sección Proyectos en filas y columnas */
-        .projects {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 20px 0;
-            border-bottom: 1px solid #D4C5B0;
-        }
-
-        .projects .project-center {
-            grid-column: span 2;
-            justify-self: center;
-        }
-
-        /* Estilos para cada proyecto */
-        .project {
-            background: #FFF5EB;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .project h3 {
-            color: #E4572E;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #4A403A;
-        }
-
-        /* Imágenes de los proyectos en blanco y negro para efecto clásico */
-        .project img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            filter: grayscale(100%);
-            margin-bottom: 15px;
-        }
-
-        /* Formulario de Contacto */
-        .contact-form {
-            background: #FFF5EB;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-        }
-
-        .contact-form button {
-            background-color: #E4572E;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #D24D28;
-        }
-
-        /* Pie de página */
-        footer {
-            background-color: #8C4A33;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-
-        /* Links y hover en enlaces */
-        a {
-            color: #E4572E;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Metadatos para SEO -->
+    <meta name="description" content="Portafolio de Gustavo Cocone - Desarrollador de Software especializado en desarrollo web y aplicaciones interactivas.">
+    <meta name="keywords" content="portafolio, desarrollo web, aplicaciones, freelance, Gustavo Cocone">
+    <meta name="author" content="Gustavo Cocone">
 </head>
 
 <body>
@@ -196,7 +24,7 @@
     <div class="container">
 
         <!-- Sección Acerca de Mí -->
-        <section class="about">
+        <section class="about fade-in">
             <h2 class="section-title">Acerca de Mí</h2>
             <p>Soy una apasionada desarrolladora de software con experiencia en diseño de sitios web, bases de datos y
                 aplicaciones interactivas. Mi misión es crear soluciones tecnológicas que faciliten la vida de las
@@ -204,7 +32,7 @@
         </section>
 
         <!-- Sección de Proyectos -->
-        <section class="projects">
+        <section class="projects fade-in">
             <h2 class="section-title">Proyectos Destacados</h2>
 
             <!-- Proyectos en una distribución de 2 columnas con uno centrado en la segunda fila -->
@@ -228,7 +56,7 @@
         </section>
 
         <!-- Formulario de Contacto -->
-        <section class="contact-form">
+        <section class="contact-form fade-in">
             <h2 class="section-title">Contacto</h2>
             <form action="https://formspree.io/f/mgveaagg" method="POST">
                 <input type="text" name="name" placeholder="Tu nombre" required>
@@ -243,8 +71,35 @@
 
     <footer>
         <p>Contacto: gustavovaldoky@gmail.com | Derechos Reservados © 2024</p>
+        <div class="social-icons">
+            <a href="https://github.com/tuusuario" target="_blank">
+                <img src="https://img.icons8.com/material-rounded/24/ffffff/github.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank">
+                <img src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
     </footer>
+
+    <!-- Script para animación en scroll -->
+    <script>
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            const scrollPosition = window.innerHeight + window.scrollY;
+
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top + window.scrollY;
+                if (scrollPosition > elementTop + 50) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
 
 </body>
 
 </html>
+
