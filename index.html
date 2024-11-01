@@ -54,7 +54,7 @@
             border-right: 1px solid #D4C5B0;
         }
 
-        /* Títulos de sección */
+        /* Títulos de sección con líneas tipo revista */
         h2.section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
@@ -83,14 +83,15 @@
             border-bottom: 1px solid #D4C5B0;
         }
 
-        .about p, .about ul {
+        .about p {
             max-width: 800px;
             margin: 20px auto;
             font-size: 1.1em;
+            line-height: 1.6;
             color: #4A403A;
         }
 
-        /* Sección Proyectos */
+        /* Sección Proyectos en filas y columnas */
         .projects {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -104,6 +105,7 @@
             justify-self: center;
         }
 
+        /* Estilos para cada proyecto */
         .project {
             background: #FFF5EB;
             padding: 20px;
@@ -129,37 +131,13 @@
             color: #4A403A;
         }
 
+        /* Imágenes de los proyectos en blanco y negro para efecto clásico */
         .project img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             filter: grayscale(100%);
             margin-bottom: 15px;
-        }
-
-        /* Sección de Ver Más Proyectos */
-        .more-projects {
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 20px;
-            background-color: #FFF5EB;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .more-projects p {
-            color: #8C4A33;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .more-projects .button {
-            background-color: #E4572E;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
         }
 
         /* Formulario de Contacto */
@@ -188,6 +166,13 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #D24D28;
         }
 
         /* Pie de página */
@@ -200,9 +185,19 @@
             font-size: 0.9em;
         }
 
+        /* Íconos de redes sociales */
+        .social-icons {
+            margin-top: 10px;
+        }
+
         .social-icons a {
             margin: 0 10px;
+            display: inline-block;
             transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
         }
 
         .social-icons img {
@@ -210,6 +205,7 @@
             height: 24px;
         }
 
+        /* Links y hover en enlaces */
         a {
             color: #E4572E;
             text-decoration: none;
@@ -233,39 +229,68 @@
         <!-- Sección Acerca de Mí -->
         <section class="about fade-in">
             <h2 class="section-title">Acerca de Mí</h2>
-            <p>¡Hola! Soy Gustavo Cocone, un apasionado desarrollador de software con experiencia en desarrollo web y aplicaciones interactivas.</p>
+            <p>¡Hola! Soy Gustavo Cocone, un apasionado desarrollador de software con experiencia en desarrollo web y aplicaciones interactivas. Me especializo en crear soluciones digitales que no solo cumplen con los requerimientos técnicos, sino que también ofrecen una excelente experiencia de usuario.</p>
+            <p>Mis principales habilidades incluyen:</p>
+            <ul>
+                <li>Desarrollo backend con <strong>Python</strong> y <strong>Flask</strong>.</li>
+                <li>Implementación de interfaces responsivas usando <strong>HTML, CSS, y JavaScript</strong>.</li>
+                <li>Optimización de bases de datos con <strong>SQL</strong> y diseño de arquitecturas escalables.</li>
+                <li>Integración de APIs y servicios externos para mejorar la funcionalidad de las aplicaciones.</li>
+            </ul>
+            <p>Me motiva el aprendizaje continuo y la superación de desafíos técnicos. Cada proyecto representa una oportunidad para mejorar mis habilidades y aportar soluciones creativas y eficaces.</p>
         </section>
 
         <!-- Sección de Proyectos -->
         <section class="projects fade-in">
             <h2 class="section-title">Proyectos Destacados</h2>
-            <div class="project">
-                <img src="ecommerce.png" alt="Proyecto E-commerce">
-                <h3>Proyecto 1: Plataforma de E-commerce</h3>
-                <p>Una plataforma de comercio electrónico desarrollada con Flask y SQLAlchemy.</p>
-            </div>
-            <div class="project project-center">
-                <img src="customapp.png" alt="Proyecto Análisis de Datos">
-                <h3>Proyecto 2: Aplicación de Análisis de Datos</h3>
-                <p>Una aplicación personalizada para la visualización de datos financieros.</p>
-            </div>
-        </section>
 
-        <!-- Apartado de Ver Más Proyectos -->
-        <section class="more-projects fade-in">
-            <h2 class="section-title">¿Quieres ver más proyectos que he realizado?</h2>
-            <p>Explora algunos de mis otros proyectos para ver cómo he aplicado mi experiencia en diferentes áreas.</p>
-            <a href="more-projects.html" class="button">Ver Más Proyectos</a>
+            <!-- Proyecto 1 -->
+            <div class="project">
+                <img src="ecommerce.png" alt="Imagen de Proyecto E-commerce">
+                <h3>Proyecto 1: Plataforma de E-commerce</h3>
+                <p>Una plataforma de comercio electrónico desarrollada con Flask y SQLAlchemy, diseñada para gestionar productos, usuarios y pedidos en tiempo real. Implementé autenticación segura y optimización de la base de datos.</p>
+                <p><strong>Desafíos:</strong> Integrar pagos en tiempo real y optimizar el rendimiento.</p>
+                <p><strong>Resultados:</strong> Logramos reducir el tiempo de carga en un 30%, mejorando la experiencia del usuario.</p>
+                <a href="https://github.com/EGirlBuchona/BytesOfTomorrow" target="_blank">Ver en GitHub</a>
+            </div>
+
+           <!-- Proyecto 2 -->
+<div class="project">
+    <img src="taskmanager.png" alt="Imagen del Proyecto de API de Gestión de Tareas">
+    <h3>Proyecto 2: API de Gestión de Tareas</h3>
+    <p>Desarrollé una API de gestión de tareas utilizando Flask y JWT para autenticación. Esta API permite a los usuarios crear, leer, actualizar y eliminar tareas de manera segura. Implementa validación de datos y cuenta con un sistema de autenticación robusto para proteger los endpoints.</p>
+    <p><strong>Desafíos:</strong> Integrar autenticación JWT de manera efectiva y realizar una validación completa de datos de entrada.</p>
+    <p><strong>Resultados:</strong> La API proporciona una plataforma segura y escalable para la gestión de tareas, con una estructura modular que facilita futuras actualizaciones.</p>
+    <a href="https://github.com/EGirlBuchona/task-management-flask-api" target="_blank">Ver en GitHub</a>
+</div>
+
+
+            <!-- Proyecto 3 -->
+            <div class="project project-center">
+                <img src="customapp.png" alt="Imagen de Proyecto Aplicación Personalizada">
+                <h3>Proyecto 3: Aplicación de Análisis de Datos</h3>
+                <p>Una aplicación personalizada para la visualización de datos financieros, desarrollada en Python y Dash. Permite el análisis interactivo de grandes volúmenes de datos y genera reportes automatizados.</p>
+                <p><strong>Desafíos:</strong> Procesar y visualizar grandes volúmenes de datos en tiempo real.</p>
+                <p><strong>Resultados:</strong> Redujo el tiempo de análisis en un 40% y facilitó la toma de decisiones informadas para los usuarios.</p>
+                <a href="https://github.com/EGirlBuchona/Chronicles-of-Code" target="_blank">Ver en GitHub</a>
+            </div>
         </section>
+<!-- Apartado de Ver Más Proyectos -->
+<section class="more-projects fade-in">
+    <h2 class="section-title">¿Quieres ver más proyectos que he realizado?</h2>
+    <p>He trabajado en una variedad de proyectos adicionales que abarcan desde aplicaciones pequeñas hasta soluciones grandes y complejas. Explora algunos de mis otros proyectos para ver cómo he aplicado mi experiencia en diferentes áreas.</p>
+    <a href="more-projects.html" class="button">Ver Más Proyectos</a>
+</section>
 
         <!-- Formulario de Contacto -->
         <section class="contact-form fade-in">
             <h2 class="section-title">Contacto</h2>
-            <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? ¡Escríbeme!</p>
+            <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? ¡Escríbeme! Estoy siempre abierto a nuevas oportunidades y colaboraciones.</p>
             <form action="https://formspree.io/f/mgveaagg" method="POST">
                 <input type="text" name="name" placeholder="Tu nombre" required>
                 <input type="email" name="_replyto" placeholder="Tu email" required>
                 <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                <input type="hidden" name="_next" value="https://EGirlBuchona.github.io/thankyou.html">
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -278,7 +303,7 @@
             <a href="https://github.com/EGirlBuchona" target="_blank">
                 <img src="https://img.icons8.com/material-rounded/24/ffffff/github.png" alt="GitHub">
             </a>
-            <a href="https://linkedin.com/in/gustavo-cocone" target="_blank">
+            <a href="https://www.linkedin.com/in/gustavo-cocone-zavaleta-298974314" target="_blank">
                 <img src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png" alt="LinkedIn">
             </a>
         </div>
@@ -289,6 +314,7 @@
         function revealOnScroll() {
             const elements = document.querySelectorAll('.fade-in');
             const scrollPosition = window.innerHeight + window.scrollY;
+
             elements.forEach(el => {
                 const elementTop = el.getBoundingClientRect().top + window.scrollY;
                 if (scrollPosition > elementTop + 50) {
@@ -296,6 +322,7 @@
                 }
             });
         }
+
         window.addEventListener('scroll', revealOnScroll);
         document.addEventListener('DOMContentLoaded', revealOnScroll);
     </script>
@@ -303,6 +330,3 @@
 </body>
 
 </html>
-
-
-
