@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Proyectos - Gustavo Cocone</title>
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333333;
+            background-color: #FDF3E7;
+            line-height: 1.6;
+        }
+
+        /* Estilo del header */
+        header {
+            background-color: #E4572E;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-style: italic;
+            color: #FFD1BA;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            border-left: 1px solid #D4C5B0;
+            border-right: 1px solid #D4C5B0;
+        }
+
+        /* Títulos de sección con líneas tipo revista */
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #8C4A33;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #D4C5B0;
+        }
+
+        /* Animación en desplazamiento */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo de los proyectos */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #D4C5B0;
+        }
+
+        .project {
+            background: #FFF5EB;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            color: #E4572E;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #4A403A;
+        }
+
+        /* Botón de regreso a la página principal */
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-back-home {
+            background-color: #E4572E;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back-home:hover {
+            background-color: #D24D28;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #8C4A33;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Más Proyectos de Gustavo Cocone</h1>
+        <p>Explora algunos otros proyectos en los que he trabajado, divididos en categorías.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Sección de Proyectos Pequeños -->
+        <section class="projects fade-in">
+            <h2 class="section-title">Proyectos Pequeños</h2>
+
+            <div class="project">
+                <h3>Proyecto 4: Calculadora Básica</h3>
+                <p>Una calculadora sencilla desarrollada con HTML, CSS, y JavaScript. Ideal para principiantes.</p>
+                <a href="https://github.com/tuusuario/calculadora" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Proyecto 5: Conversor de Monedas</h3>
+                <p>Aplicación de conversión de monedas usando una API pública para obtener tasas de cambio en tiempo real.</p>
+                <a href="https://github.com/tuusuario/conversor-monedas" target="_blank">Ver en GitHub</a>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos Medianos -->
+        <section class="projects fade-in">
+            <h2 class="section-title">Proyectos Medianos</h2>
+
+            <div class="project">
+                <h3>Proyecto 6: Blog Personal</h3>
+                <p>Un blog personal creado con Django, con funcionalidades de comentarios y administración de contenido.</p>
+                <a href="https://github.com/tuusuario/blog" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Proyecto 7: Juego de Memoria</h3>
+                <p>Un juego de memoria simple hecho en JavaScript que desafía la memoria visual del usuario.</p>
+                <a href="https://github.com/tuusuario/juego-memoria" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Proyecto 8: To-Do List con React</h3>
+                <p>Aplicación de lista de tareas desarrollada con React, que permite organizar actividades diarias.</p>
+                <a href="https://github.com/tuusuario/todolist-react" target="_blank">Ver en GitHub</a>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos Grandes -->
+        <section class="projects fade-in">
+            <h2 class="section-title">Proyectos Grandes</h2>
+
+            <div class="project">
+                <h3>Proyecto 9: Sistema de Gestión de Inventarios</h3>
+                <p>Una aplicación para gestionar el inventario de una empresa, desarrollada con Flask y MySQL.</p>
+                <a href="https://github.com/tuusuario/gestion-inventarios" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Proyecto 10: Plataforma de E-learning</h3>
+                <p>Plataforma educativa desarrollada con Django, que permite a los usuarios acceder a cursos en línea.</p>
+                <a href="https://github.com/tuusuario/elearning-platform" target="_blank">Ver en GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Proyecto 11: Sistema de Reservas de Hotel</h3>
+                <p>Aplicación completa de reservas hoteleras, desarrollada con PHP y MySQL, con panel de administración.</p>
+                <a href="https://github.com/tuusuario/reservas-hotel" target="_blank">Ver en GitHub</a>
+            </div>
+        </section>
+
+        <!-- Botón de regreso a la página principal -->
+        <div class="back-home">
+            <a href="index.html" class="btn-back-home">Regresar a la Página Principal</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contacto: gustavovaldoky@gmail.com | Derechos Reservados © 2024</p>
+    </footer>
+
+    <!-- Script para animación en scroll -->
+    <script>
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            const scrollPosition = window.innerHeight + window.scrollY;
+
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top + window.scrollY;
+                if (scrollPosition > elementTop + 50) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+</body>
+
+</html>
