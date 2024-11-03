@@ -8,7 +8,7 @@
     <!-- Fuentes de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-     <style>
+    <style>
         /* Reset básico */
         * {
             margin: 0;
@@ -75,74 +75,71 @@
             opacity: 1;
             transform: translateY(0);
         }
- /* Sección Acerca de mí */
-    .about {
-        text-align: center; /* Centra el contenido de texto */
-        padding: 40px 20px;
-        border-bottom: 1px solid #D4C5B0;
-    }
 
-    .about p {
-        max-width: 800px;
-        margin: 20px auto;
-        font-size: 1.1em;
-        line-height: 1.6;
-        color: #4A403A;
-    }
-
-    /* Ajustes para centrar la lista */
-    .about ul {
-        list-style-position: inside; /* Coloca los puntos dentro del área de texto */
-        padding: 0; /* Elimina el padding de la lista */
-        display: inline-block; /* Hace que la lista se comporte como contenido centrado */
-        text-align: left; /* Alinea el texto de la lista a la izquierda dentro del centro */
-    }
-
-    .about ul li {
-        margin-bottom: 10px;
-    
- /* Ajuste para la sección de Proyectos en una sola columna centrada */
-    .projects {
-        display: grid;
-        grid-template-columns: 1fr; /* Cada proyecto ocupa una columna completa */
-        gap: 20px;
-        padding: 20px 0;
-        border-bottom: 1px solid #D4C5B0;
-    }
-
-    .project {
-        background: #FFF5EB;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
-        margin: 0 auto; /* Centra cada proyecto */
-        max-width: 800px; /* Limita el ancho máximo para que se vea bien */
-    }
-
-    .project:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .project h3 {
-        color: #E4572E;
-        font-family: 'Playfair Display', serif;
-        margin-bottom: 10px;
-    }
-
-    .project p {
-        margin-top: 10px;
-        font-size: 0.95em;
-        color: #4A403A;
-    }
-
-    /* Ajustes de responsividad para que se mantenga igual en móviles */
-    @media (max-width: 768px) {
-        .projects {
-            grid-template-columns: 1fr;
+        /* Sección Acerca de mí */
+        .about {
+            text-align: center; /* Centrado */
+            padding: 40px 20px;
+            border-bottom: 1px solid #D4C5B0;
         }
-    }
+
+        .about p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #4A403A;
+        }
+
+        /* Centrado de la lista en About Me */
+        .about ul {
+            list-style-position: inside;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .about ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Sección Proyectos en una sola columna centrada */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #D4C5B0;
+        }
+
+        /* Estilos para cada proyecto */
+        .project {
+            background: #FFF5EB;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            color: #E4572E;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #4A403A;
+        }
+
         /* Imágenes de los proyectos en blanco y negro para efecto clásico */
         .project img {
             width: 100%;
@@ -245,10 +242,6 @@
                 font-size: 2em;
             }
 
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
             .contact-form input,
             .contact-form textarea,
             .contact-form button {
@@ -299,87 +292,102 @@
 
     <div class="container">
 
-    <!-- About Me Section -->
-<section class="about fade-in">
-    <h2 class="section-title">About Me</h2>
-    <p>Hello! I'm Gustavo Cocone, a computer systems engineer and software developer with solid experience in web development and process automation. I specialize in creating efficient, scalable digital solutions tailored to meet each client's unique needs.</p>
-    <p>My core technical skills include:</p>
-    <ul>
-        <li>Backend development with <strong>Python</strong> and frameworks like <strong>Django</strong> and <strong>Flask</strong>.</li>
-        <li>Building dynamic, responsive interfaces using <strong>React, HTML, CSS</strong>, and <strong>JavaScript</strong>.</li>
-        <li>Database optimization and management with <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</li>
-        <li>API integration and process automation to enhance application functionality.</li>
-    </ul>
-    <p>I am motivated by continuous learning and solving technical challenges. Every project represents an opportunity to improve my skills and deliver innovative, effective solutions.</p>
-</section>
+        <!-- About Me Section -->
+        <section class="about fade-in">
+            <h2 class="section-title">About Me</h2>
+            <p>Hello! I'm Gustavo Cocone, a computer systems engineer and software developer with solid experience in
+                web development and process automation. I specialize in creating efficient, scalable digital solutions
+                tailored to meet each client's unique needs.</p>
+            <p>My core technical skills include:</p>
+            <ul>
+                <li>Backend development with <strong>Python</strong> and frameworks like <strong>Django</strong> and
+                    <strong>Flask</strong>.</li>
+                <li>Building dynamic, responsive interfaces using <strong>React, HTML, CSS</strong>, and
+                    <strong>JavaScript</strong>.</li>
+                <li>Database optimization and management with <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and
+                    <strong>Oracle</strong>.</li>
+                <li>API integration and process automation to enhance application functionality.</li>
+            </ul>
+            <p>I am motivated by continuous learning and solving technical challenges. Every project represents an
+                opportunity to improve my skills and deliver innovative, effective solutions.</p>
+        </section>
 
         <!-- Featured Projects Section -->
-<section class="projects fade-in">
-    <h2 class="section-title">Featured Projects</h2>
+        <section class="projects fade-in">
+            <h2 class="section-title">Featured Projects</h2>
 
-    <!-- Project 1 -->
-    <div class="project">
-        <img src="ecommerce.png" alt="E-commerce Project Image">
-        <h3>Project 1: E-commerce Platform</h3>
-        <p>An e-commerce platform developed with Flask and SQLAlchemy, designed to manage products, users, and orders in real time. I implemented secure authentication and optimized the database.</p>
-        <p><strong>Challenges:</strong> Integrating real-time payments and optimizing performance.</p>
-        <p><strong>Results:</strong> Reduced load time by 30%, improving the user experience significantly.</p>
-        <a href="https://github.com/EGirlBuchona/BytesOfTomorrow" target="_blank">View on GitHub</a>
-    </div>
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="ecommerce.png" alt="E-commerce Project Image">
+                <h3>Project 1: E-commerce Platform</h3>
+                <p>An e-commerce platform developed with Flask and SQLAlchemy, designed to manage products, users, and
+                    orders in real time. I implemented secure authentication and optimized the database.</p>
+                <p><strong>Challenges:</strong> Integrating real-time payments and optimizing performance.</p>
+                <p><strong>Results:</strong> Reduced load time by 30%, improving the user experience significantly.</p>
+                <a href="https://github.com/EGirlBuchona/BytesOfTomorrow" target="_blank">View on GitHub</a>
+            </div>
 
-    <!-- Project 2 -->
-    <div class="project">
-        <img src="taskmanager.png" alt="Task Management API Project Image">
-        <h3>Project 2: Task Management API</h3>
-        <p>I developed a task management API using Flask and JWT for authentication. This API allows users to securely create, read, update, and delete tasks. It includes data validation and a robust authentication system to secure endpoints.</p>
-        <p><strong>Challenges:</strong> Effectively integrating JWT authentication and implementing comprehensive data validation.</p>
-        <p><strong>Results:</strong> The API provides a secure, scalable platform for task management, with a modular structure that facilitates future updates.</p>
-        <a href="https://github.com/EGirlBuchona/task-management-flask-api" target="_blank">View on GitHub</a>
-    </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="taskmanager.png" alt="Task Management API Project Image">
+                <h3>Project 2: Task Management API</h3>
+                <p>I developed a task management API using Flask and JWT for authentication. This API allows users to
+                    securely create, read, update, and delete tasks. It includes data validation and a robust
+                    authentication system to secure endpoints.</p>
+                <p><strong>Challenges:</strong> Effectively integrating JWT authentication and implementing
+                    comprehensive data validation.</p>
+                <p><strong>Results:</strong> The API provides a secure, scalable platform for task management, with a
+                    modular structure that facilitates future updates.</p>
+                <a href="https://github.com/EGirlBuchona/task-management-flask-api" target="_blank">View on GitHub</a>
+            </div>
 
-    <!-- Project 3 -->
-    <div class="project project-center">
-        <img src="customapp.png" alt="Custom Data Analysis Application Image">
-        <h3>Project 3: Data Analysis Application</h3>
-        <p>A custom application for financial data visualization, developed with Python and Dash. It enables interactive analysis of large datasets and generates automated reports.</p>
-        <p><strong>Challenges:</strong> Processing and visualizing large datasets in real time.</p>
-        <p><strong>Results:</strong> Reduced analysis time by 40%, enabling users to make informed decisions faster.</p>
-        <a href="https://github.com/EGirlBuchona/Chronicles-of-Code" target="_blank">View on GitHub</a>
-    </div>
-</section>
+            <!-- Project 3 -->
+            <div class="project project-center">
+                <img src="customapp.png" alt="Custom Data Analysis Application Image">
+                <h3>Project 3: Data Analysis Application</h3>
+                <p>A custom application for financial data visualization, developed with Python and Dash. It enables
+                    interactive analysis of large datasets and generates automated reports.</p>
+                <p><strong>Challenges:</strong> Processing and visualizing large datasets in real time.</p>
+                <p><strong>Results:</strong> Reduced analysis time by 40%, enabling users to make informed decisions
+                    faster.</p>
+                <a href="https://github.com/EGirlBuchona/Chronicles-of-Code" target="_blank">View on GitHub</a>
+            </div>
+        </section>
 
-<!-- More Projects Section -->
-<section class="more-projects fade-in">
-    <h2 class="section-title">Want to See More of My Projects?</h2>
-    <p>I've worked on a variety of additional projects, ranging from small applications to large-scale solutions. Explore some of my other work to see how I’ve applied my expertise across different areas.</p>
-    <a href="more-projects.html" class="button">See More Projects</a>
-</section>
+        <!-- More Projects Section -->
+        <section class="more-projects fade-in">
+            <h2 class="section-title">Want to See More of My Projects?</h2>
+            <p>I've worked on a variety of additional projects, ranging from small applications to large-scale
+                solutions. Explore some of my other work to see how I’ve applied my expertise across different areas.
+            </p>
+            <a href="more-projects.html" class="button">See More Projects</a>
+        </section>
 
-<!-- Contact Form Section -->
-<section class="contact-form fade-in">
-    <h2 class="section-title">Contact</h2>
-    <p>Have a project in mind or just want to say hi? Feel free to reach out! I'm always open to new opportunities and collaborations.</p>
-    <form action="https://formspree.io/f/mgveaagg" method="POST">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="_replyto" placeholder="Your email" required>
-        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-        <input type="hidden" name="_next" value="https://EGirlBuchona.github.io/thankyou.html">
-        <button type="submit">Send</button>
-    </form>
-</section>
+        <!-- Contact Form Section -->
+        <section class="contact-form fade-in">
+            <h2 class="section-title">Contact</h2>
+            <p>Have a project in mind or just want to say hi? Feel free to reach out! I'm always open to new
+                opportunities and collaborations.</p>
+            <form action="https://formspree.io/f/mgveaagg" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+                <input type="hidden" name="_next" value="https://EGirlBuchona.github.io/thankyou.html">
+                <button type="submit">Send</button>
+            </form>
+        </section>
 
-<footer>
-    <p>Contact: gustavovaldoky@gmail.com | All Rights Reserved © 2024</p>
-    <div class="social-icons">
-        <a href="https://github.com/EGirlBuchona" target="_blank">
-            <img src="https://img.icons8.com/material-rounded/24/ffffff/github.png" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/gustavo-cocone-zavaleta-298974314" target="_blank">
-            <img src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png" alt="LinkedIn">
-        </a>
-    </div>
-</footer>
-
+        <footer>
+            <p>Contact: gustavovaldoky@gmail.com | All Rights Reserved © 2024</p>
+            <div class="social-icons">
+                <a href="https://github.com/EGirlBuchona" target="_blank">
+                    <img src="https://img.icons8.com/material-rounded/24/ffffff/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/gustavo-cocone-zavaleta-298974314" target="_blank">
+                    <img src="https://img.icons8.com/material-rounded/24/ffffff/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </footer>
 
     <!-- Script para animación en scroll -->
     <script>
