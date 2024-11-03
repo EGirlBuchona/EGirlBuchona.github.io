@@ -76,39 +76,56 @@
             transform: translateY(0);
         }
 
-        /* Estilo de los proyectos */
+          /* Ajuste para la sección de Proyectos en filas y columnas */
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid #D4C5B0;
+    }
+
+    .project {
+        background: #FFF5EB;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .project h3 {
+        color: #E4572E;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 10px;
+    }
+
+    .project p {
+        margin-top: 10px;
+        font-size: 0.95em;
+        color: #4A403A;
+    }
+
+    /* Estilos para que el tercer proyecto esté centrado */
+    .projects .project:nth-child(3) {
+        grid-column: 1 / span 2; /* Ocupa ambas columnas */
+        justify-self: center; /* Centrado en el grid */
+    }
+
+    /* Ajustes de responsividad para mantener el diseño en dispositivos móviles */
+    @media (max-width: 768px) {
         .projects {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 20px 0;
-            border-bottom: 1px solid #D4C5B0;
+            grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
         }
-
-        .project {
-            background: #FFF5EB;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+        
+        .projects .project:nth-child(3) {
+            grid-column: auto; /* Elimina la necesidad de ocupar ambas columnas en pantallas pequeñas */
         }
-
-        .project:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .project h3 {
-            color: #E4572E;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #4A403A;
-        }
+    }
 
         /* Botón de regreso a la página principal */
         .back-home {
