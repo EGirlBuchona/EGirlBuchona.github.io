@@ -90,10 +90,10 @@
             line-height: 1.6;
             color: #4A403A;
         }
- /* Ajuste para la sección de Proyectos en filas y columnas */
+ /* Ajuste para la sección de Proyectos en una sola columna centrada */
     .projects {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; /* Cada proyecto ocupa una columna completa */
         gap: 20px;
         padding: 20px 0;
         border-bottom: 1px solid #D4C5B0;
@@ -105,6 +105,8 @@
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s, box-shadow 0.2s;
+        margin: 0 auto; /* Centra cada proyecto */
+        max-width: 800px; /* Limita el ancho máximo para que se vea bien */
     }
 
     .project:hover {
@@ -124,20 +126,10 @@
         color: #4A403A;
     }
 
-    /* Estilos para que el tercer proyecto esté centrado */
-    .projects .project:nth-child(3) {
-        grid-column: 1 / span 2; /* Ocupa ambas columnas */
-        justify-self: center; /* Centrado en el grid */
-    }
-
-    /* Ajustes de responsividad para mantener el diseño en dispositivos móviles */
+    /* Ajustes de responsividad para que se mantenga igual en móviles */
     @media (max-width: 768px) {
         .projects {
-            grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
-        }
-        
-        .projects .project:nth-child(3) {
-            grid-column: auto; /* Elimina la necesidad de ocupar ambas columnas en pantallas pequeñas */
+            grid-template-columns: 1fr;
         }
     }
         /* Imágenes de los proyectos en blanco y negro para efecto clásico */
