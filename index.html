@@ -8,7 +8,7 @@
     <!-- Fuentes de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <style>
+     <style>
         /* Reset básico */
         * {
             margin: 0;
@@ -213,6 +213,67 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsividad para dispositivos móviles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            h2.section-title {
+                font-size: 2em;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            footer p {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 30px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .about p,
+            .project p {
+                font-size: 0.95em;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            footer p {
+                font-size: 0.7em;
+            }
         }
     </style>
 </head>
